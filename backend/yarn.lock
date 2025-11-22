@@ -253,17 +253,20 @@
   dependencies:
     undici-types "~7.14.0"
 
-"@xmtp/agent-sdk@^1.1.7":
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/@xmtp/agent-sdk/-/agent-sdk-1.1.7.tgz#f1111ff525e5573dc91758ae92e1c5183a3bd0fd"
-  integrity sha512-RddduUoHmIYLKZfVrgCXF/UW3aVaYG0j7+JhELX6Xece4QPdwIG0ttN031fab/PADPJfL5hfxBRkthiOlpZNrQ==
+"@xmtp/agent-sdk@^1.1.15":
+  version "1.1.15"
+  resolved "https://registry.yarnpkg.com/@xmtp/agent-sdk/-/agent-sdk-1.1.15.tgz#40931279ce247f8dbafeb92b9e13b9d8a06c6774"
+  integrity sha512-2X7eI+1ttQhVoWBewHLt9lI0ok0r8e8N0t4y2NkIiwv28ZO0djxynpXP5RfnflU6ffASJb4LiNybbPFk67DTpw==
   dependencies:
+    "@xmtp/content-type-markdown" "^1.0.0"
     "@xmtp/content-type-reaction" "^2.0.2"
+    "@xmtp/content-type-read-receipt" "^2.0.2"
     "@xmtp/content-type-remote-attachment" "^2.0.2"
     "@xmtp/content-type-reply" "^2.0.2"
     "@xmtp/content-type-text" "^2.0.2"
-    "@xmtp/node-sdk" "^4.2.3"
-    uint8arrays "^5.1.0"
+    "@xmtp/content-type-transaction-reference" "^2.0.2"
+    "@xmtp/content-type-wallet-send-calls" "^2.0.0"
+    "@xmtp/node-sdk" "4.3.1"
     viem "^2.37.6"
 
 "@xmtp/content-type-group-updated@^2.0.2":
@@ -273,6 +276,13 @@
   dependencies:
     "@xmtp/content-type-primitives" "^2.0.2"
     "@xmtp/proto" "^3.78.0"
+
+"@xmtp/content-type-markdown@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@xmtp/content-type-markdown/-/content-type-markdown-1.0.0.tgz#460edeb5af927718ce158a3725fa60db2f0a2088"
+  integrity sha512-B0Pevjjxf+Nps8MyMXEklp7jzcwIH42tFzT3FlGTiOSh/0g3o8SgkxPETKGK/ifL5vjV0u4AzeJsgTEbHl/d6Q==
+  dependencies:
+    "@xmtp/content-type-primitives" "^2.0.2"
 
 "@xmtp/content-type-primitives@^2.0.2":
   version "2.0.2"
@@ -285,6 +295,13 @@
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@xmtp/content-type-reaction/-/content-type-reaction-2.0.2.tgz#b0dfd0e201275cf2531bbc44300386685355dbb8"
   integrity sha512-v7wGMycSsUi8NyLR+ytjDhNY4Nr4p8qNwKx8LZPlA8IwLacq2Bp2vKxlOAnGX7m5XP9ivpBNNZvkpR5Limvz1g==
+  dependencies:
+    "@xmtp/content-type-primitives" "^2.0.2"
+
+"@xmtp/content-type-read-receipt@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@xmtp/content-type-read-receipt/-/content-type-read-receipt-2.0.2.tgz#0c24652b37cdfd60690ab385c82ed6b1f7f6142d"
+  integrity sha512-klrdEhWt5OtE3dhBZiFRvjheI3d5XlLbIz9TMkvvPAaG4fvqJeMvlkkKqpyUUeVFTe6JQp1VfzT0bEL7RAhzMg==
   dependencies:
     "@xmtp/content-type-primitives" "^2.0.2"
 
@@ -312,15 +329,29 @@
   dependencies:
     "@xmtp/content-type-primitives" "^2.0.2"
 
+"@xmtp/content-type-transaction-reference@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@xmtp/content-type-transaction-reference/-/content-type-transaction-reference-2.0.2.tgz#dc48ad2e85d9013e31121b409430f8c3c7c355f5"
+  integrity sha512-7JwqZ3phX/XIZByY4XnteW/0c/XtPOeuEG3GayLOMELyEBJxoVog4evxFidoWb/vtEm9JuqqKqh8VtUaekhXYA==
+  dependencies:
+    "@xmtp/content-type-primitives" "^2.0.2"
+
+"@xmtp/content-type-wallet-send-calls@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@xmtp/content-type-wallet-send-calls/-/content-type-wallet-send-calls-2.0.0.tgz#e3462aafdce22090ed179deefed2204a5dd71ddd"
+  integrity sha512-212g68DjwFMh3gaAwULJvrhpuje6Tp4rF94oy3lQRvnXCQ+xLkyDi8pT5Pyw3Dm6jW+ke1U0hauzV7sLCgIFSw==
+  dependencies:
+    "@xmtp/content-type-primitives" "^2.0.2"
+
 "@xmtp/node-bindings@1.5.4":
   version "1.5.4"
   resolved "https://registry.yarnpkg.com/@xmtp/node-bindings/-/node-bindings-1.5.4.tgz#37995d203dc715f442da65d861f166763d1d72b4"
   integrity sha512-ffVCQhV8xQWxE1plPIeVMr0qFFB4/2FjYuprowKIfxLqOUqUR9w+otxZFfMZ+MGQ5j37SpFnPxUgDoOrNczUJQ==
 
-"@xmtp/node-sdk@^4.2.3":
-  version "4.2.3"
-  resolved "https://registry.yarnpkg.com/@xmtp/node-sdk/-/node-sdk-4.2.3.tgz#ce496b1fb64e248061abc99ff87884b376355716"
-  integrity sha512-BHX5ML76Qg1dZjMzEUfeZQ8U39Te4Q5Q79Sw1LOYuNm7qNMU16JQcBAQjbN54u95l5L8nhD4kqGYKpq5pO4aqQ==
+"@xmtp/node-sdk@4.3.1":
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/@xmtp/node-sdk/-/node-sdk-4.3.1.tgz#45c34f78d5125a1798b71c4b95639f1cac8c55f8"
+  integrity sha512-ZnUFYvTwT8OGq23b84q9PUCgPlj9oNppnYcW1WYIaWpDZlTVcNaDdHe+a+x+tBt7MgA+YU0CrOaXnmSVM3e4Gw==
   dependencies:
     "@xmtp/content-type-group-updated" "^2.0.2"
     "@xmtp/content-type-primitives" "^2.0.2"
@@ -406,11 +437,6 @@ long@^5.0.0, long@^5.2.0:
   resolved "https://registry.yarnpkg.com/long/-/long-5.3.2.tgz#1d84463095999262d7d7b7f8bfd4a8cc55167f83"
   integrity sha512-mNAgZ1GmyNhD7AuqnTG3/VQ26o760+ZYBPKjPvugO8+nLbYfX6TVpJPseBvopbdY+qpZ/lKUnmEc1LeZYS3QAA==
 
-multiformats@^13.0.0:
-  version "13.4.1"
-  resolved "https://registry.yarnpkg.com/multiformats/-/multiformats-13.4.1.tgz#d4d0aeaef73ed9dde1b04ea20c40554372085704"
-  integrity sha512-VqO6OSvLrFVAYYjgsr8tyv62/rCQhPgsZUXLTqoFLSgdkgiUYKYeArbt1uWLlEpkjxQe+P0+sHlbPEte1Bi06Q==
-
 ox@0.9.6:
   version "0.9.6"
   resolved "https://registry.yarnpkg.com/ox/-/ox-0.9.6.tgz#5cf02523b6db364c10ee7f293ff1e664e0e1eab7"
@@ -474,13 +500,6 @@ typescript@^5.7.3:
   version "5.9.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.9.3.tgz#5b4f59e15310ab17a216f5d6cf53ee476ede670f"
   integrity sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==
-
-uint8arrays@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/uint8arrays/-/uint8arrays-5.1.0.tgz#14047c9bdf825d025b7391299436e5e50e7270f1"
-  integrity sha512-vA6nFepEmlSKkMBnLBaUMVvAC4G3CTmO58C12y4sq6WPDOR7mOFYOi7GlrQ4djeSbP6JG9Pv9tJDM97PedRSww==
-  dependencies:
-    multiformats "^13.0.0"
 
 undici-types@~7.14.0:
   version "7.14.0"
