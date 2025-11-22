@@ -29,7 +29,7 @@ http://mini-app-example.ngrok.io?tags=vitalik.eth,humanagent.eth,0x...
 ✅ 0x... → 0x...
 ```
 
-## Get started 
+## Get started
 
 ### Requirements
 
@@ -37,14 +37,13 @@ http://mini-app-example.ngrok.io?tags=vitalik.eth,humanagent.eth,0x...
 - Yarn v4 or higher
 - Docker (optional, for local network)
 
-
 ### Run the agent
 
 ```bash
 # git clone repo
 git clone https://github.com/ephemeraHQ/xmtp-mini-app-example mini-app-example
 # go to the folder
-cd mini-app-example  
+cd mini-app-example
 cd backend
 # install packages
 yarn
@@ -57,12 +56,12 @@ yarn start
 To run your XMTP agent, you must create a `.env` file with the following variables:
 
 ```bash
-XMTP_WALLET_KEY= # the private key of the wallet
-XMTP_DB_ENCRYPTION_KEY= # encryption key for the local database
+XMTP_WALLET_KEY=0x1234 # the private key of the wallet
+XMTP_DB_ENCRYPTION_KEY=0x5678 # encryption key for the local database
 XMTP_ENV=dev # local, dev, production
 ```
 
-
+For development purposes, you can [generate these values here](https://xmtp.github.io/agent-sdk-starter/).
 
 ### Run the frontend
 
@@ -70,7 +69,7 @@ XMTP_ENV=dev # local, dev, production
 # git clone repo
 git clone https://github.com/ephemeraHQ/xmtp-mini-app-example mini-app-example
 # go to the folder
-cd mini-app-example  
+cd mini-app-example
 cd frontend
 # install packages
 yarn
@@ -89,7 +88,7 @@ NEXT_PUBLIC_FARCASTER_HEADER=""
 NEXT_PUBLIC_FARCASTER_PAYLOAD=""
 NEXT_PUBLIC_FARCASTER_SIGNATURE=""
 
-NEXT_PUBLIC_APP_ENV="" 
+NEXT_PUBLIC_APP_ENV=""
 
 
 NGROK_DOMAIN=""
